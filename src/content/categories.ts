@@ -51,9 +51,9 @@ export const categories: Category[] = [
     ],
   },
   {
-    slug: 'smp',
-    name: '두피 SMP',
-    englishName: 'Scalp micropigmentation',
+    slug: 'scalp',
+    name: '두피',
+    englishName: 'Scalp',
     description: '두피 시술의 착색과 회복을 위한 관리',
     accent: '02',
     sections: [
@@ -61,13 +61,13 @@ export const categories: Category[] = [
         id: 'before',
         label: '시술 전',
         eyebrow: 'Before care',
-        images: [{ src: '/images/smp-before.png', alt: '두피 SMP 시술 전 안내사항', aspect: 'square' }],
+        images: [{ src: '/images/scalp-before.png', alt: '두피 시술 전 안내사항', aspect: 'square' }],
       },
       {
         id: 'after',
         label: '시술 후',
         eyebrow: 'After care',
-        images: [{ src: '/images/smp-after.png', alt: '두피 SMP 시술 후 안내사항', aspect: 'square' }],
+        images: [{ src: '/images/scalp-after.png', alt: '두피 시술 후 안내사항', aspect: 'square' }],
       },
     ],
   },

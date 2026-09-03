@@ -17,7 +17,7 @@ describe('application routes', () => {
 
   it('keeps guide details focused on the original image without repeated Korean copy', () => {
     render(
-      <MemoryRouter initialEntries={['/guide/smp']}>
+      <MemoryRouter initialEntries={['/guide/scalp']}>
         <App />
       </MemoryRouter>,
     )

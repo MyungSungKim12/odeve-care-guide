@@ -66,7 +66,7 @@ export default defineConfig({
 
 - [ ] **Step 3: 원본 이미지를 의미 있는 이름으로 복사한다**
 
-`brow-before.png`, `brow-after.png`, `smp-before.png`, `smp-after.png`, `lash-addict.png`, `eyeline-before.png`, `eyeline-after.png`, `lip-before.png`, `lip-after.png`, `lip-balm.jpg`, `lip-healing.jpg`, `lip-result.png`, `remove-before.png`, `remove-after.png`, `remove-ampoule-after.png`로 복사하며 원본 해시와 복사본 해시가 일치하는지 확인한다.
+`brow-before.png`, `brow-after.png`, `scalp-before.png`, `scalp-after.png`, `lash-addict.png`, `eyeline-before.png`, `eyeline-after.png`, `lip-before.png`, `lip-after.png`, `lip-balm.jpg`, `lip-healing.jpg`, `lip-result.png`, `remove-before.png`, `remove-after.png`, `remove-ampoule-after.png`로 복사하며 원본 해시와 복사본 해시가 일치하는지 확인한다.
 
 - [ ] **Step 4: 의존성을 설치하고 빈 앱 빌드를 확인한다**
 
@@ -97,7 +97,7 @@ git commit -m "chore: scaffold responsive care guide"
 
 ```ts
 expect(categories.map((category) => category.slug)).toEqual([
-  'brow', 'smp', 'eyeline', 'lip', 'remove',
+  'brow', 'scalp', 'eyeline', 'lip', 'remove',
 ])
 expect(getCategoryBySlug('lip')?.sections.map((section) => section.id)).toEqual([
   'before', 'after', 'balm', 'healing', 'result',

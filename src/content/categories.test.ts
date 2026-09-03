@@ -6,7 +6,7 @@ describe('care guide categories', () => {
   it('keeps the five customer-facing categories in display order', () => {
     expect(categories.map((category) => category.slug)).toEqual([
       'brow',
-      'smp',
+      'scalp',
       'eyeline',
       'lip',
       'remove',
