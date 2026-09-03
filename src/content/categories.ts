@@ -17,7 +17,6 @@ export interface Category {
   slug: string
   name: string
   englishName: string
-  description: string
   accent: string
   sections: GuideSection[]
 }
@@ -27,7 +26,6 @@ export const categories: Category[] = [
     slug: 'brow',
     name: '눈썹',
     englishName: 'Brow',
-    description: '자연스러운 눈썹을 위한 시술 전·후 관리',
     accent: '01',
     sections: [
       {
@@ -51,53 +49,10 @@ export const categories: Category[] = [
     ],
   },
   {
-    slug: 'scalp',
-    name: '두피',
-    englishName: 'Scalp',
-    description: '두피 시술의 착색과 회복을 위한 관리',
-    accent: '02',
-    sections: [
-      {
-        id: 'before',
-        label: '시술 전',
-        eyebrow: 'Before care',
-        images: [{ src: '/images/scalp-before.png', alt: '두피 시술 전 안내사항', aspect: 'square' }],
-      },
-      {
-        id: 'after',
-        label: '시술 후',
-        eyebrow: 'After care',
-        images: [{ src: '/images/scalp-after.png', alt: '두피 시술 후 안내사항', aspect: 'square' }],
-      },
-    ],
-  },
-  {
-    slug: 'eyeline',
-    name: '아이라인',
-    englishName: 'Eyeline',
-    description: '선명한 라인을 오래 유지하기 위한 관리',
-    accent: '03',
-    sections: [
-      {
-        id: 'before',
-        label: '시술 전',
-        eyebrow: 'Before care',
-        images: [{ src: '/images/eyeline-before.png', alt: '아이라인 시술 전 안내사항', aspect: 'square' }],
-      },
-      {
-        id: 'after',
-        label: '시술 후',
-        eyebrow: 'After care',
-        images: [{ src: '/images/eyeline-after.png', alt: '아이라인 시술 후 안내사항', aspect: 'square' }],
-      },
-    ],
-  },
-  {
     slug: 'lip',
     name: '입술',
     englishName: 'Lip',
-    description: '입술 시술 준비부터 회복 과정까지 한눈에',
-    accent: '04',
+    accent: '02',
     sections: [
       {
         id: 'before',
@@ -132,10 +87,49 @@ export const categories: Category[] = [
     ],
   },
   {
+    slug: 'eyeline',
+    name: '아이라인',
+    englishName: 'Eyeline',
+    accent: '03',
+    sections: [
+      {
+        id: 'before',
+        label: '시술 전',
+        eyebrow: 'Before care',
+        images: [{ src: '/images/eyeline-before.png', alt: '아이라인 시술 전 안내사항', aspect: 'square' }],
+      },
+      {
+        id: 'after',
+        label: '시술 후',
+        eyebrow: 'After care',
+        images: [{ src: '/images/eyeline-after.png', alt: '아이라인 시술 후 안내사항', aspect: 'square' }],
+      },
+    ],
+  },
+  {
+    slug: 'scalp',
+    name: '두피',
+    englishName: 'Scalp',
+    accent: '04',
+    sections: [
+      {
+        id: 'before',
+        label: '시술 전',
+        eyebrow: 'Before care',
+        images: [{ src: '/images/scalp-before.png', alt: '두피 시술 전 안내사항', aspect: 'square' }],
+      },
+      {
+        id: 'after',
+        label: '시술 후',
+        eyebrow: 'After care',
+        images: [{ src: '/images/scalp-after.png', alt: '두피 시술 후 안내사항', aspect: 'square' }],
+      },
+    ],
+  },
+  {
     slug: 'remove',
     name: '잔흔 제거',
     englishName: 'Pigment removal',
-    description: '잔흔·앰플 제거 전후에 꼭 필요한 관리',
     accent: '05',
     sections: [
       {

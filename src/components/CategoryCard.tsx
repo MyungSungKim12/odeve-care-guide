@@ -13,7 +13,6 @@ export function CategoryCard({ category }: CategoryCardProps) {
       <span className="category-card__copy">
         <span className="category-card__english">{category.englishName}</span>
         <strong>{category.name}</strong>
-        <span className="category-card__description">{category.description}</span>
       </span>
       <span className="category-card__arrow" aria-hidden="true">↗</span>
     </Link>
