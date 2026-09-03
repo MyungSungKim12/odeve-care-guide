@@ -15,6 +15,7 @@ export function GuidePage() {
   const navigate = useNavigate()
   const category = getCategoryBySlug(slug)
   const [openImage, setOpenImage] = useState<GuideImageData | null>(null)
+  const closeLightbox = useCallback(() => setOpenImage(null), [])
 
   if (!category) {
     return <NotFoundPage />
@@ -22,7 +23,6 @@ export function GuidePage() {
 
   const requestedId = location.hash.slice(1)
   const activeSection = category.sections.find((section) => section.id === requestedId) ?? category.sections[0]
-  const closeLightbox = useCallback(() => setOpenImage(null), [])
 
   return (
     <div className="site-shell">
