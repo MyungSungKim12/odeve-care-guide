@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 
 const PLACE_NAME = '오더브 뷰티'
+const PLACE_DISPLAY_NAME = 'odéve'
 const PLACE_ADDRESS = '서울 강서구 강서로 211 드림앤드림 5층 504호'
 const GEOCODE_ADDRESS = '서울 강서구 강서로 211'
 const NAVER_MAP_CLIENT_ID = '018h5ncq17'
@@ -104,7 +105,7 @@ export function LocationMap() {
       </div>
       <div className="location-card__details">
         <div>
-          <strong>{PLACE_NAME}</strong>
+          <strong>{PLACE_DISPLAY_NAME}</strong>
           <p>{PLACE_ADDRESS}</p>
         </div>
       </div>
