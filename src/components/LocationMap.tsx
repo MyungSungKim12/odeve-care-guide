@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 const PLACE_NAME = '오더브 뷰티'
 const PLACE_ADDRESS = '서울 강서구 강서로 211 드림앤드림 5층 504호'
 const GEOCODE_ADDRESS = '서울 강서구 강서로 211'
+const NAVER_MAP_CLIENT_ID = '018h5ncq17'
 const NAVER_MAP_URL = `https://map.naver.com/p/search/${encodeURIComponent(PLACE_NAME)}`
 
 interface GeocodeItem {
@@ -34,7 +35,7 @@ export function LocationMap() {
   const [mapUnavailable, setMapUnavailable] = useState(false)
 
   useEffect(() => {
-    const clientId = import.meta.env.VITE_NAVER_MAP_CLIENT_ID
+    const clientId = import.meta.env.VITE_NAVER_MAP_CLIENT_ID || NAVER_MAP_CLIENT_ID
 
     if (!clientId || !mapElement.current) {
       setMapUnavailable(true)
