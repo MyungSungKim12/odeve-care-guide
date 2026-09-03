@@ -27,6 +27,7 @@ interface NaverMapsApi {
 declare global {
   interface Window {
     naver?: { maps: NaverMapsApi }
+    odeveInitMap?: () => void
   }
 }
 
@@ -75,15 +76,15 @@ export function LocationMap() {
     }
 
     const script = document.createElement('script')
-    script.src = `https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${encodeURIComponent(clientId)}&submodules=geocoder`
+    window.odeveInitMap = initializeMap
+    script.src = `https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${encodeURIComponent(clientId)}&submodules=geocoder&callback=odeveInitMap`
     script.async = true
-    script.onload = initializeMap
     script.onerror = () => setMapUnavailable(true)
     document.head.appendChild(script)
 
     return () => {
-      script.onload = null
       script.onerror = null
+      delete window.odeveInitMap
     }
   }, [])
 
@@ -102,7 +103,6 @@ export function LocationMap() {
         ) : null}
       </div>
       <div className="location-card__details">
-        <span className="location-card__pin" aria-hidden="true">●</span>
         <div>
           <strong>{PLACE_NAME}</strong>
           <p>{PLACE_ADDRESS}</p>

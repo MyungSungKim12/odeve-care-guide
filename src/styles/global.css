@@ -331,25 +331,14 @@ img {
 .location-card__details {
   display: flex;
   align-items: flex-start;
-  gap: 0.8rem;
   padding: 1.2rem 0;
-}
-
-.location-card__pin {
-  display: grid;
-  width: 2rem;
-  height: 2rem;
-  flex: 0 0 auto;
-  place-items: center;
-  border-radius: 0.55rem;
-  color: #fff;
-  background: #03c75a;
-  font-size: 0.5rem;
 }
 
 .location-card__details strong {
   font-family: 'Gowun Batang', Georgia, serif;
-  font-size: 1.15rem;
+  font-size: 1.35rem;
+  font-weight: 400;
+  letter-spacing: -0.06em;
 }
 
 .location-card__details p {
