@@ -114,7 +114,7 @@ img {
 }
 
 .home-hero {
-  padding: clamp(2.7rem, 12vw, 7rem) 0 clamp(2.5rem, 8vw, 5rem);
+  padding: clamp(1.35rem, 6vw, 2.35rem) 0 clamp(1.25rem, 5vw, 2rem);
   border-top: 1px solid var(--line);
 }
 
@@ -138,12 +138,12 @@ img {
 
 .home-hero h1 {
   max-width: 11ch;
-  font-size: clamp(2.65rem, 12vw, 7rem);
+  font-size: clamp(2.15rem, 10vw, 3.8rem);
   line-height: 1.02;
 }
 
 .home-hero__description {
-  margin: 1.5rem 0 0;
+  margin: 0.85rem 0 0;
   color: var(--muted);
   font-size: clamp(0.95rem, 3vw, 1.12rem);
   line-height: 1.85;
@@ -151,19 +151,19 @@ img {
 
 .category-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.75rem;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.55rem;
 }
 
 .category-card {
   position: relative;
-  display: grid;
+  display: flex;
   min-width: 0;
-  min-height: 10.6rem;
-  grid-template-columns: auto minmax(0, 1fr) auto;
-  align-items: start;
-  gap: 0.85rem;
-  padding: clamp(1.15rem, 4vw, 1.8rem);
+  min-height: 6.7rem;
+  grid-column: span 2;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 0.35rem;
   overflow: hidden;
   border: 1px solid rgba(73, 63, 56, 0.1);
   border-radius: 1.25rem;
@@ -173,7 +173,16 @@ img {
   transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
 }
 
+.category-card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.category-card:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
 .category-card__number {
+  display: none;
   padding-top: 0.15rem;
   color: var(--accent);
   font-family: Georgia, serif;
@@ -184,9 +193,12 @@ img {
   display: flex;
   min-width: 0;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .category-card__english {
+  display: none;
   margin-bottom: 0.25rem;
   overflow: hidden;
   color: var(--muted);
@@ -198,11 +210,14 @@ img {
 
 .category-card strong {
   font-family: 'Gowun Batang', Georgia, serif;
-  font-size: clamp(1.45rem, 6vw, 2rem);
+  font-size: clamp(1.02rem, 4.7vw, 1.35rem);
   letter-spacing: -0.05em;
+  line-height: 1.25;
+  word-break: keep-all;
 }
 
 .category-card__description {
+  display: none;
   margin-top: auto;
   padding-top: 1.6rem;
   color: var(--muted);
@@ -212,7 +227,7 @@ img {
 }
 
 .category-card__arrow {
-  display: grid;
+  display: none;
   width: 44px;
   height: 44px;
   place-items: center;
@@ -240,8 +255,8 @@ img {
 }
 
 .home-note {
-  margin: 2rem 0 0;
-  padding: 1.4rem 0 0;
+  margin: 1.15rem 0 0;
+  padding: 0.9rem 0 0;
   border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: 0.78rem;
@@ -474,12 +489,8 @@ img {
   }
 
   .category-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 1rem;
-  }
-
-  .category-card:last-child:nth-child(odd) {
-    grid-column: 1 / -1;
   }
 
   .guide-panel {
@@ -501,6 +512,40 @@ img {
     grid-template-columns: minmax(0, 1.2fr) minmax(20rem, 0.8fr);
     align-items: end;
     gap: 3rem;
+    padding: clamp(2.5rem, 5vw, 4rem) 0 clamp(1.5rem, 3vw, 2.5rem);
+  }
+
+  .category-card {
+    display: grid;
+    min-height: 10.6rem;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: start;
+    justify-content: initial;
+    gap: 0.85rem;
+    padding: clamp(1.15rem, 2vw, 1.8rem);
+  }
+
+  .category-card__number,
+  .category-card__english,
+  .category-card__description {
+    display: block;
+  }
+
+  .category-card__copy {
+    align-items: initial;
+    text-align: left;
+  }
+
+  .category-card strong {
+    font-size: clamp(1.45rem, 2.4vw, 2rem);
+  }
+
+  .category-card__arrow {
+    display: grid;
+  }
+
+  .home-hero h1 {
+    font-size: clamp(4rem, 7.5vw, 7rem);
   }
 
   .home-hero .eyebrow,
@@ -519,11 +564,7 @@ img {
   }
 
   .category-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .category-card:last-child:nth-child(odd) {
-    grid-column: auto;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
   .guide-page {
