@@ -15,6 +15,18 @@ describe('application routes', () => {
     expect(screen.getByRole('heading', { name: '입술' })).toBeInTheDocument()
   })
 
+  it('keeps guide details focused on the original image without repeated Korean copy', () => {
+    render(
+      <MemoryRouter initialEntries={['/guide/smp']}>
+        <App />
+      </MemoryRouter>,
+    )
+
+    expect(screen.queryByText('두피 시술의 착색과 회복을 위한 관리')).not.toBeInTheDocument()
+    expect(screen.queryByRole('heading', { name: '시술 전 안내사항' })).not.toBeInTheDocument()
+    expect(screen.getByText('Before care')).toBeInTheDocument()
+  })
+
   it('shows a recovery page for an unknown guide URL', () => {
     render(
       <MemoryRouter initialEntries={['/guide/unknown']}>

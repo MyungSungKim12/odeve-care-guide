@@ -34,7 +34,6 @@ export function GuidePage() {
         <header className="guide-heading">
           <p className="eyebrow">{category.englishName}</p>
           <h1>{category.name}</h1>
-          <p>{category.description}</p>
         </header>
         <SectionTabs
           sections={category.sections}
@@ -52,7 +51,6 @@ export function GuidePage() {
         >
           <div className="guide-panel__heading">
             <span>{activeSection.eyebrow}</span>
-            <h2>{activeSection.label} 안내사항</h2>
           </div>
           <div className="guide-images">
             {activeSection.images.map((image) => (
