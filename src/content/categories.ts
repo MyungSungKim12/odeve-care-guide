@@ -40,12 +40,6 @@ export const categories: Category[] = [
         eyebrow: 'After care',
         images: [{ src: '/images/brow-after.png', alt: '눈썹 시술 후 안내사항', aspect: 'square' }],
       },
-      {
-        id: 'lash',
-        label: '속눈썹 영양제',
-        eyebrow: 'Lash care',
-        images: [{ src: '/images/lash-addict.png', alt: '래쉬애딕트 속눈썹 영양제 안내사항', aspect: 'square' }],
-      },
     ],
   },
   {

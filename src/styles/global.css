@@ -83,6 +83,16 @@ img {
   text-decoration: none;
 }
 
+.brand-header:not(.brand-header--compact) {
+  text-align: center;
+}
+
+.brand-header:not(.brand-header--compact) .brand-header__link {
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .brand-header__wordmark {
   font-family: 'Gowun Batang', Georgia, serif;
   font-size: clamp(2.35rem, 9vw, 4.6rem);
@@ -262,6 +272,112 @@ img {
   color: var(--muted);
   font-size: 0.78rem;
   text-align: center;
+}
+
+.location-card {
+  margin-top: clamp(2.5rem, 8vw, 5rem);
+  padding: clamp(1rem, 4vw, 1.75rem);
+  border: 1px solid rgba(73, 63, 56, 0.1);
+  border-radius: clamp(1.25rem, 4vw, 2rem);
+  background: rgba(251, 249, 245, 0.88);
+  box-shadow: var(--shadow);
+}
+
+.location-card__heading {
+  padding: 0.25rem 0 1rem;
+}
+
+.location-card__heading h2 {
+  margin: 0;
+  font-family: 'Gowun Batang', Georgia, serif;
+  font-size: clamp(1.7rem, 7vw, 2.5rem);
+  font-weight: 400;
+  letter-spacing: -0.06em;
+}
+
+.location-card__map-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: #e8e5df;
+}
+
+.location-card__map {
+  width: 100%;
+  height: clamp(15rem, 58vw, 28rem);
+}
+
+.location-card__fallback {
+  position: absolute;
+  display: grid;
+  inset: 0;
+  place-items: center;
+  color: var(--accent-dark);
+  background:
+    linear-gradient(rgba(245, 243, 239, 0.72), rgba(245, 243, 239, 0.72)),
+    repeating-linear-gradient(45deg, #dedbd5 0, #dedbd5 1px, transparent 1px, transparent 28px);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.location-card__fallback span {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper);
+}
+
+.location-card__details {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  padding: 1.2rem 0;
+}
+
+.location-card__pin {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 0.55rem;
+  color: #fff;
+  background: #03c75a;
+  font-size: 0.5rem;
+}
+
+.location-card__details strong {
+  font-family: 'Gowun Batang', Georgia, serif;
+  font-size: 1.15rem;
+}
+
+.location-card__details p {
+  margin: 0.3rem 0 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+.location-card__button {
+  display: flex;
+  min-height: 3.25rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  border-radius: 0.85rem;
+  color: #fff;
+  background: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.location-card__button:focus-visible,
+.location-card__fallback:focus-visible {
+  outline: 3px solid rgba(130, 108, 92, 0.45);
+  outline-offset: 3px;
 }
 
 .back-link {
