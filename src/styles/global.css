@@ -305,6 +305,8 @@ img {
 .location-card__map {
   width: 100%;
   height: clamp(15rem, 58vw, 28rem);
+  pointer-events: none;
+  user-select: none;
 }
 
 .location-card__fallback {
