@@ -17,14 +17,24 @@ describe('application routes', () => {
 
   it('keeps guide details focused on the original image without repeated Korean copy', () => {
     render(
+      <MemoryRouter initialEntries={['/guide/brow']}>
+        <App />
+      </MemoryRouter>,
+    )
+
+    expect(screen.queryByText('자연스러운 눈썹을 위한 시술 전·후 관리')).not.toBeInTheDocument()
+    expect(screen.queryByRole('heading', { name: '시술 전 안내사항' })).not.toBeInTheDocument()
+    expect(screen.getByText('Before care')).toBeInTheDocument()
+  })
+
+  it('does not expose removed scalp and pigment removal guides', () => {
+    render(
       <MemoryRouter initialEntries={['/guide/scalp']}>
         <App />
       </MemoryRouter>,
     )
 
-    expect(screen.queryByText('두피 시술의 착색과 회복을 위한 관리')).not.toBeInTheDocument()
-    expect(screen.queryByRole('heading', { name: '시술 전 안내사항' })).not.toBeInTheDocument()
-    expect(screen.getByText('Before care')).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: '페이지를 찾을 수 없어요' })).toBeInTheDocument()
   })
 
   it('shows a recovery page for an unknown guide URL', () => {

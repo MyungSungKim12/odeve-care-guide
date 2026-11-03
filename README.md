@@ -25,13 +25,15 @@ npm run build
 
 ## 콘텐츠 관리
 
+- 현재 고객 메뉴: 눈썹, 입술, 아이라인
+- 각 메뉴의 탭: 시술 전, 시술 후, 리터치 안내
 - 원본 안내 이미지: `public/images`
 - 카테고리 및 이미지 연결: `src/content/categories.ts`
 - 전체 화면 스타일: `src/styles/global.css`
 - 설계 및 구현 계획: `docs/superpowers`
 - 반응형 검증 기록과 캡처: `docs/qa`
 
-이미지를 교체할 때는 같은 파일명을 사용하면 코드 수정 없이 반영됩니다. 카테고리명이나 탭 구성을 바꾸려면 `src/content/categories.ts`를 수정합니다.
+이미지를 교체할 때는 같은 파일명을 사용하면 코드 수정 없이 반영됩니다. 현재 이미지는 카테고리별 `before`, `after`, `retouch` JPG 파일로 관리합니다. 카테고리명이나 탭 구성을 바꾸려면 `src/content/categories.ts`를 수정합니다.
 
 ## GitHub 업로드
 

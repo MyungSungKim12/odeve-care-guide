@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap');
 
 :root {
   color: #222523;
@@ -94,7 +94,7 @@ img {
 }
 
 .brand-header__wordmark {
-  font-family: 'Gowun Batang', Georgia, serif;
+  font-family: Georgia, serif;
   font-size: clamp(2.35rem, 9vw, 4.6rem);
   line-height: 0.95;
   letter-spacing: -0.09em;
@@ -140,9 +140,9 @@ img {
 .guide-heading h1,
 .not-found-page h1 {
   margin: 0;
-  font-family: 'Gowun Batang', Georgia, serif;
-  font-weight: 400;
-  letter-spacing: -0.07em;
+  font-family: inherit;
+  font-weight: 500;
+  letter-spacing: -0.045em;
 }
 
 .home-hero h1 {
@@ -196,7 +196,7 @@ img {
   display: none;
   padding-top: 0.15rem;
   color: var(--accent);
-  font-family: Georgia, serif;
+  font-family: inherit;
   font-size: 0.76rem;
 }
 
@@ -213,14 +213,15 @@ img {
   margin-bottom: 0.25rem;
   overflow: hidden;
   color: var(--muted);
-  font-family: Georgia, serif;
+  font-family: inherit;
   font-size: 0.85rem;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .category-card strong {
-  font-family: 'Gowun Batang', Georgia, serif;
+  font-family: inherit;
+  font-weight: 500;
   font-size: clamp(1.02rem, 4.7vw, 1.35rem);
   letter-spacing: -0.05em;
   line-height: 1.25;
@@ -289,10 +290,10 @@ img {
 
 .location-card__heading h2 {
   margin: 0;
-  font-family: 'Gowun Batang', Georgia, serif;
+  font-family: inherit;
   font-size: clamp(1.7rem, 7vw, 2.5rem);
-  font-weight: 400;
-  letter-spacing: -0.06em;
+  font-weight: 500;
+  letter-spacing: -0.045em;
 }
 
 .location-card__map-wrap {
@@ -337,10 +338,10 @@ img {
 }
 
 .location-card__details strong {
-  font-family: 'Gowun Batang', Georgia, serif;
+  font-family: inherit;
   font-size: 1.35rem;
-  font-weight: 400;
-  letter-spacing: -0.06em;
+  font-weight: 500;
+  letter-spacing: -0.045em;
 }
 
 .location-card__details p {
@@ -445,7 +446,7 @@ img {
 
 .guide-panel__heading span {
   color: var(--accent);
-  font-family: Georgia, serif;
+  font-family: inherit;
   font-size: 0.75rem;
   letter-spacing: 0.13em;
   text-transform: uppercase;
@@ -671,6 +672,7 @@ img {
     position: sticky;
     top: 1rem;
     grid-area: heading;
+    padding: clamp(1.5rem, 3vw, 2.25rem) 0 0.9rem;
   }
 
   .section-tabs {
