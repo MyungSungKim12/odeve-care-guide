@@ -5,7 +5,7 @@ import { describe, expect, it } from 'vitest'
 import { App } from './App'
 
 describe('application routes', () => {
-  it('links to the Odeve Instagram profile from the home page footer', () => {
+  it('places the Odeve Instagram profile link before the main home content', () => {
     render(
       <MemoryRouter initialEntries={['/']}>
         <App />
@@ -20,6 +20,8 @@ describe('application routes', () => {
     )
     expect(instagramLink).toHaveAttribute('target', '_blank')
     expect(instagramLink).toHaveAttribute('rel', 'noreferrer')
+    expect(instagramLink.compareDocumentPosition(screen.getByRole('main')) & Node.DOCUMENT_POSITION_FOLLOWING)
+      .toBeTruthy()
   })
 
   it('renders the selected guide from a direct URL', () => {
