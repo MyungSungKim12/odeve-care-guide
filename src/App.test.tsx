@@ -5,6 +5,23 @@ import { describe, expect, it } from 'vitest'
 import { App } from './App'
 
 describe('application routes', () => {
+  it('links to the Odeve Instagram profile from the home page footer', () => {
+    render(
+      <MemoryRouter initialEntries={['/']}>
+        <App />
+      </MemoryRouter>,
+    )
+
+    const instagramLink = screen.getByRole('link', { name: '오더브 인스타그램 방문' })
+
+    expect(instagramLink).toHaveAttribute(
+      'href',
+      'https://www.instagram.com/odeve_beauty?obrf=MXd2d3piNnZwcDZyOA==',
+    )
+    expect(instagramLink).toHaveAttribute('target', '_blank')
+    expect(instagramLink).toHaveAttribute('rel', 'noreferrer')
+  })
+
   it('renders the selected guide from a direct URL', () => {
     render(
       <MemoryRouter initialEntries={['/guide/lip']}>

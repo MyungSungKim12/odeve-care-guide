@@ -259,6 +259,7 @@ img {
 .brand-header__link:focus-visible,
 .back-link:focus-visible,
 .primary-link:focus-visible,
+.instagram-link:focus-visible,
 .section-tabs__tab:focus-visible,
 .guide-image:focus-visible,
 .lightbox__close:focus-visible {
@@ -273,6 +274,45 @@ img {
   color: var(--muted);
   font-size: 0.78rem;
   text-align: center;
+}
+
+.social-footer {
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem 0 0.5rem;
+}
+
+.instagram-link {
+  display: grid;
+  width: 3.25rem;
+  height: 3.25rem;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--ink);
+  background: rgba(251, 249, 245, 0.82);
+  box-shadow: 0 8px 24px rgba(64, 51, 42, 0.06);
+  text-decoration: none;
+  transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+
+.instagram-link svg {
+  width: 1.55rem;
+  height: 1.55rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+}
+
+.instagram-link__dot {
+  fill: currentColor;
+  stroke: none;
+}
+
+.instagram-link:hover {
+  transform: translateY(-2px);
+  background: #fffdf9;
+  box-shadow: var(--shadow);
 }
 
 .location-card {
